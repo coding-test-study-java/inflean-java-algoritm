@@ -1,4 +1,4 @@
-/*
+package string;/*
 2. 대소문자 변환
 설명
 
