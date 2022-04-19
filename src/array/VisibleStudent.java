@@ -28,4 +28,39 @@ import java.util.*;
  */
 
 public class VisibleStudent {
+    public static void main(String[] args) {
+
+        int answer = 1;
+
+        Scanner sc = new Scanner(System.in);
+
+        int cnt = sc.nextInt();
+
+        int max = 0;
+
+        int[] studentTall = new int[cnt];
+
+        for (int i = 0; i < cnt; i++) { // 학생 키 배열에 넣기
+
+            studentTall[i] = sc.nextInt();
+
+        } // for (int i = 0; i < cnt; i++) 끝
+
+        max = studentTall[0];
+
+        for (int y = 0; y < cnt; y++) {
+
+            if (studentTall[y] > max) {     // 뒤에 학생 키가 더 크거나 같다면?
+
+                answer++;
+
+                max = studentTall[y];
+
+            }   // if (studentTall[y] <= studentTall[y - 1]) 끝
+
+        }   // for (int y = 1; y < cnt; y++) 끝
+
+        System.out.println(answer);
+
+    } // main() 끝
 } // class 끝
